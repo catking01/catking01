@@ -1,16 +1,94 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**catking01/catking01** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=console.log(%22Hello%2C%20World%22);catking01祝您今天愉快!&center=true&size=27)](https://git.io/typing-svg)
 
-Here are some ideas to get you started:
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/assets/images/coding.gif" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/assets/images/developer.svg" height="225px" />
+  <img src="https://cdn.jsdelivr.net/gh/catking01/catking01/assets/images/coding.gif" />
+</picture>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<div>&nbsp;</div>
+
+<div>
+  <a href="https://x.com/catking01"><img src="https://img.shields.io/badge/Twitter-推特-blue" /></a>&emsp;
+  <a href="https://www.youtube.com/@catking01"><img src="https://img.shields.io/badge/YouTube-油管-c32136" /></a>&emsp;
+  <a href="https://blog.catking01.dev/"><img src="https://img.shields.io/badge/Website-博客-8c36db" /></a>&emsp;
+  <a href="https://mp.catking01.dev"><img src="https://img.shields.io/badge/WeChat-微信-07c160" /></a>&emsp;
+  <a href="https://space.bilibili.com/448488855/"><img src="https://img.shields.io/badge/Bilibili-B站-ff69b4" /></a>&emsp;
+  <!-- visitor -->
+  <img src="https://komarev.com/ghpvc/?username=catking01&label=Views&color=orange&style=flat" alt="访问量统计" />&emsp;
+  <!-- wakatime -->
+  <a href="https://wakatime.com/@catking01"><img src="https://wakatime.com/badge/user/42d0678c-368b-448b-9a77-5d21c5b55352.svg" /></a>
+</div>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-snake-contrib/github-contribution-grid-snake.svg" />
+  <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
+</picture>
+
+![](./sponsors.png)
+
+<div align="center">
+<a href="https://www.buymeacoffee.com/catking01" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217" />
+</a>
+
+<table style="margin-top: 20px;">
+  <tbody>
+    <tr>
+      <td align="center">
+        <img src="https://files.catking01.dev/wxpay.png" width="250px"  alt="wxpay" style="border-radius:10px;" />
+      </td>
+      <td align="center">
+        <img src="https://files.catking01.dev/alipay.jpg" width="250px"  alt="alipay" style="border-radius:10px;" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+#  🙋 Hello
+
+<table>
+
+<tr><td>
+
+### 🤺 About Me
+
+<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/catking01/catking01/assets/images/jobs.png" />
+
+<p>&emsp;&emsp;嗨，你好，我是catking01。热爱编程、摄影、读书、旅行。</p>
+<p>&emsp;&emsp;热爱计算机科学和 IT 互联网事业，希望能成为一名优秀的开发者。</p>
+<p>&emsp;&emsp;我们正在让这个世界变得更加美好，通过代码的重复使用和延展构建完美体系。</p>
+<p>&emsp;&emsp;<strong>We're making the world a better place. Through constructing elegant hierarchies for maximum code reuse and extensibility.</strong></p>
+
+</tr></td>
+
+<tr><td>
+
+### 📃 Recent Blog
+
+<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/catking01/catking01/assets/images/astronaut.png" />
+
+<!-- feed start -->
+- Jan 01 - 
+<!-- feed end -->
+
+</td></tr>
+
+<tr><td>
+
+### 📊 WakaTime
+
+<!--START_SECTION:waka-->
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                451 commits         █████░░░░░░░░░░░░░░░░░░░░   20.36 % 
+🌆 Daytime                624 commits         ███████░░░░░░░░░░░░░░░░░░   28.17 % 
+🌃 Evening                547 commits         ██████░░░░░░░░░░░░░░░░░░░   24.70 % 
+🌙 Night                  593 commits         ███████░░░░░░░░░░░░░░░░░░   26.77 % 
