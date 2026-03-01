@@ -28,7 +28,7 @@
   <img alt="github-snake" src="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
 </picture>
 
-![sponsors](./sponsors.png)
+<!--[sponsors](./sponsors.png)-->
 
 <a href="https://www.buymeacoffee.com/catking01" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217" />
