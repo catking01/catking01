@@ -19,7 +19,7 @@
   <!-- visitor -->
   <img src="https://komarev.com/ghpvc/?username=catking01&label=Views&color=orange&style=flat" alt="访问量统计" />&emsp;
   <!-- wakatime -->
-  <a href="https://wakatime.com/@catking01"><img src="https://wakatime.com/badge/user/0b5e9d7c-397c-4b61-8200-a04ab9e8f519.svg" /></a>
+  <a href="https://wakatime.com/@0b5e9d7c-397c-4b61-8200-a04ab9e8f519"><img src="https://wakatime.com/badge/user/0b5e9d7c-397c-4b61-8200-a04ab9e8f519.svg" /></a>
 </div>
 
 <picture>
