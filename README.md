@@ -16,8 +16,8 @@
   <a href="https://blog.catking01.dev/"><img src="https://img.shields.io/badge/Website-博客-8c36db" /></a>&emsp;
   <a href="https://mp.catking01.dev"><img src="https://img.shields.io/badge/WeChat-微信-07c160" /></a>&emsp;
   <a href="https://space.bilibili.com/3493122027817057?spm_id_from=333.1387.0.0"><img src="https://img.shields.io/badge/Bilibili-B站-ff69b4" /></a>&emsp;
-  <img src="https://komarev.com/ghpvc/?username=catking01&label=Views&color=orange&style=flat" alt="访问量统计" />&emsp;
-  <a href="https://wakatime.com/@your_real_wakatime"><img src="https://wakatime.com/badge/user/your-real-wakatime-id.svg" /></a>
+  <img src="https://komarev.com/ghpvc/?username=猫王归来提督&label=Views&color=orange&style=flat" alt="访问量统计" />&emsp;
+  <a href="https://wakatime.com/@catking01"><img src="https://wakatime.com/badge/user/your-real-wakatime-id.svg" /></a>
 </div>
 
 <picture>
