@@ -11,6 +11,14 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      repository-projects: read
+      user-email: read
+      user: read
+      orgs: read
     steps:
       # 基础信息（顺带了几个小插件）
       - name: base
