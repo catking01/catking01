@@ -65,28 +65,30 @@
 ### 📊 WakaTime
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-41%20mins-blue?style=flat)
+
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                451 commits         █████░░░░░░░░░░░░░░░░░░░░   20.36 % 
-🌆 Daytime                624 commits         ███████░░░░░░░░░░░░░░░░░░   28.17 % 
-🌃 Evening                547 commits         ██████░░░░░░░░░░░░░░░░░░░   24.70 % 
-🌙 Night                  593 commits         ███████░░░░░░░░░░░░░░░░░░   26.77 % 
+🌞 Morning                281 commits         █████░░░░░░░░░░░░░░░░░░░░   18.76 % 
+🌆 Daytime                447 commits         ███████░░░░░░░░░░░░░░░░░░   29.84 % 
+🌃 Evening                540 commits         █████████░░░░░░░░░░░░░░░░   36.05 % 
+🌙 Night                  230 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.35 % 
 ```
-
-**📅 I'm Most Productive on Friday**
+📅 **I'm Most Productive on Saturday** 
 
 ```text
-Monday                   354 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.98 % 
-Tuesday                  315 commits         ███░░░░░░░░░░░░░░░░░░░░░░   14.22 % 
-Wednesday                300 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.54 % 
-Thursday                 300 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.54 % 
-Friday                   366 commits         ███░░░░░░░░░░░░░░░░░░░░░░   16.52 % 
-Saturday                 255 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.51 % 
-Sunday                   325 commits         ███░░░░░░░░░░░░░░░░░░░░░░   14.67 %
+Monday                   143 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.55 % 
+Tuesday                  266 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.76 % 
+Wednesday                169 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.28 % 
+Thursday                 217 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.49 % 
+Friday                   188 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.55 % 
+Saturday                 419 commits         ███████░░░░░░░░░░░░░░░░░░   27.97 % 
+Sunday                   96 commits          ██░░░░░░░░░░░░░░░░░░░░░░░   06.41 % 
 ```
 
-**📊 This Week I Spent My Time On**
+
+📊 **This Week I Spent My Time On** 
 
 ```text
 🕑︎ Time Zone: Asia/Shanghai
@@ -101,8 +103,8 @@ No Activity Tracked This Week
 No Activity Tracked This Week
 ```
 
-Last Updated on 02/03/2026 17:19:06 UTC
 
+ Last Updated on 27/05/2026 17:14:59 UTC
 <!--END_SECTION:waka-->
 </td></tr>
 </table>
