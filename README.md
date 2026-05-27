@@ -30,22 +30,7 @@
 
 <!--[sponsors](./sponsors.png)-->
 
-<a href="https://www.buymeacoffee.com/catking01" target="_blank">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217" />
-</a>
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <img src="https://files.catking01.dev/wxpay.png" width="250px" alt="wxpay" />
-      </td>
-      <td align="center">
-        <img src="https://files.catking01.dev/alipay.jpg" width="250px" alt="alipay" />
-      </td>
-    </tr>
-  </tbody>
-</table>
 </div>
 
 # 🙋 Hello
@@ -57,25 +42,22 @@
 
 <img align="right" width="88" src="https://cdn.jsdelivr.net/gh/catking01/catking01/assets/images/jobs.png" />
 
-<p>&emsp;&emsp;嗨，你好，我是catking01。热爱编程、摄影、读书、旅行。</p>
-<p>&emsp;&emsp;热爱计算机科学和 IT 互联网事业，希望能成为一名优秀的开发者。</p>
-<p>&emsp;&emsp;我们正在让这个世界变得更加美好，通过代码的重复使用和延展构建完美体系。</p>
-<p>&emsp;&emsp;<strong>We're making the world a better place. Through constructing elegant hierarchies for maximum code reuse and extensibility.</strong></p>
+<p>&emsp;&emsp;嗨，你好，我是catking01。一名研究型系统工程师（Research Systems Engineer），致力于将物理严格性、数值科学与软件架构统一为可演化的科研基础设施。</p>
+<p>&emsp;&emsp;我不满足于"现象复现"——我追问每一步的因果：FFT边界是否污染？增益更新是否严格同步？偏振基底是否被错误假设？数值伪稳定还是真锁模？</p>
+<p>&emsp;&emsp;当前正在构建超快激光三维数字孪生平台与领域无关的科学模拟运行时（Runtime Lab），从激光器时域模拟、NALM模块数值建模到光学系统仿真，追求机器精度级别的数值可靠性。</p>
+<p>&emsp;&emsp;我相信代码是认知的载体，模拟不是黑箱——它是每一步都必须可追溯、可审计、可复现的因果系统。</p>
 
 </td></tr>
 <tr><td>
 
-### 📃 Recent Blog
+### 🚀 Current Work
 
 <img align="right" width="88" src="https://cdn.jsdelivr.net/gh/catking01/catking01/assets/images/astronaut.png" />
 
-<!-- feed start -->
-- Jan 01 - [2025 → 2026，给时光以生命，待岁月以温柔！](https://blog.guoqi.dev/posts/2025/)
-- Mar 18 - [昆仑巢「疯狂星期六」，没有人是一座孤岛～](https://blog.guoqi.dev/posts/kun-lun-chao/)
-- Mar 10 - [你好，北京！你好，原则科技！](https://blog.guoqi.dev/posts/yuan-ze-ke-ji/)
-- Feb 20 - [行则将至，未来可期，和 2023 好好说声再见吧！](https://blog.guoqi.dev/posts/2023/)
-- Feb 16 - [西藏之旅｜青春没有售价，火车直达拉萨！](https://blog.guoqi.dev/posts/xi-zang/)
-<!-- feed end -->
+- **Ultrafast Laser 3D Digital Twin** — 超快激光三维数字孪生平台，构建从光源到传输的端到端仿真系统
+- **Runtime Lab** — 领域无关的科学模拟运行时，支持 plugin registry、trace、replay、deterministic validation
+- **Laser Oscillator Simulator** — 激光振荡器时域模拟平台，支持动态增益模型与 NALM 结构全流程仿真
+- **Optical System Simulation** — 光束在复杂光学链路中的传输特性分析工具
 
 </td></tr>
 <tr><td>
