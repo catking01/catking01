@@ -14,7 +14,7 @@ OUT_DARK = ROOT / 'dino-runner-dark.gif'
 
 W, H = 800, 200
 FPS = 20
-DURATION_S = 20
+DURATION_S = 60
 FRAMES = FPS * DURATION_S
 DT = 1.0 / FPS
 
