@@ -23,9 +23,9 @@
 </div>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner-dark.gif" />
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner.gif" />
-  <img alt="chrome-dino" src="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner-dark.gif" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner-dark.gif" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner.gif" />
+  <img alt="chrome-dino" src="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner-dark.gif" />
 </picture>
 
 <!--[sponsors](./sponsors.png)-->
