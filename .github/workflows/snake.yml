@@ -1,10 +1,9 @@
 name: Snake Contrib
 
 on:
-  schedule:
-    - cron: "0 0 * * *"
-
-  # allows to manually run the job at any time
+  # disabled — replaced with dino runner
+  # schedule:
+  #   - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
