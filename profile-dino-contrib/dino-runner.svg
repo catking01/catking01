@@ -1,121 +1,176 @@
-<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="200" fill="#ffffff" rx="8"/>
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chrome Dino auto runner">
+  <rect width="800" height="200" rx="8" fill="#ffffff"/>
 
-  <!-- clouds -->
-  <g opacity="0.12">
-    <ellipse cx="620" cy="35" rx="40" ry="8" fill="#535353"/>
-    <ellipse cx="640" cy="32" rx="25" ry="6" fill="#535353"/>
-    <ellipse cx="605" cy="33" rx="20" ry="5" fill="#535353"/>
-  </g>
+  <style>
+    .px {
+      image-rendering: pixelated;
+      shape-rendering: crispEdges;
+    }
+  </style>
 
-  <!-- ground line -->
-  <line x1="0" y1="176" x2="800" y2="176" stroke="#535353" stroke-width="2"/>
-  <line x1="0" y1="180" x2="900" y2="180" stroke="#535353" stroke-width="1" stroke-dasharray="10,6,4,6,6,6">
-    <animateTransform attributeName="transform" type="translate" values="0,0;-32,0" dur="0.25s" repeatCount="indefinite"/>
-  </line>
+  <defs>
+    <image id="sheet" href="100-offline-sprite.png" width="1233" height="100" class="px"/>
 
-  <!-- === OBSTACLES (cacti) === -->
-  <!-- Cactus 1: approaches every 2s, dino needs to jump -->
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="850,0;-100,0" dur="2s" repeatCount="indefinite" begin="0s"/>
-    <g fill="#535353">
-      <rect x="0" y="148" width="6" height="28" rx="2"/>
-      <rect x="-2" y="154" width="8" height="4" rx="1"/>
-      <rect x="2" y="150" width="8" height="4" rx="1"/>
-    </g>
-  </g>
-  <!-- Cactus 2: offset by 1s -->
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="850,0;-100,0" dur="2s" repeatCount="indefinite" begin="1s"/>
-    <g fill="#535353">
-      <rect x="0" y="150" width="6" height="26" rx="2"/>
-      <rect x="4" y="154" width="8" height="4" rx="1"/>
-      <rect x="-4" y="158" width="6" height="4" rx="1"/>
-    </g>
-  </g>
+    <clipPath id="game-clip">
+      <rect x="30" y="25" width="740" height="150" rx="2"/>
+    </clipPath>
 
-  <!-- === DINO GROUP with synced jumps === -->
-  <!-- Jump begins at 1.55s, 3.55s, 5.55s... (=0.55 + 2n, but offset to match cactus cycle) -->
-  <!-- Cactus at x=100 = (850-100)/950*2 = 1.58s. Jump begins at 1.4s, peaks at 1.55s -->
-  <g>
-    <animateTransform attributeName="transform" type="translate"
-      values="0,0;0,0;0,0;0,-58;0,-50;0,-28;0,-8;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0;0,0"
-      dur="2s" repeatCount="indefinite"
-      keyTimes="0;0.65;0.72;0.75;0.78;0.81;0.84;0.87;0.9;0.92;0.94;0.95;0.96;0.97;0.98;0.985;0.99;0.995;0.998;1"/>
+    <symbol id="spr-cloud" viewBox="0 0 46 14"><use href="#sheet" x="-86" y="-2" class="px"/></symbol>
+    <symbol id="spr-horizon" viewBox="0 0 600 12"><use href="#sheet" x="-2" y="-54" class="px"/></symbol>
+    <symbol id="spr-cactus-small" viewBox="0 0 17 35"><use href="#sheet" x="-228" y="-2" class="px"/></symbol>
+    <symbol id="spr-cactus-large" viewBox="0 0 25 50"><use href="#sheet" x="-332" y="-2" class="px"/></symbol>
 
-    <!-- body group with running bob -->
+    <symbol id="spr-bird" viewBox="0 0 46 40">
+      <use href="#sheet" x="-134" y="-2" class="px">
+        <animate attributeName="x" values="-134;-180;-134" dur="0.24s" repeatCount="indefinite"/>
+      </use>
+    </symbol>
+
+    <symbol id="spr-dino-run-1" viewBox="0 0 44 47"><use href="#sheet" x="-936" y="-2" class="px"/></symbol>
+    <symbol id="spr-dino-run-2" viewBox="0 0 44 47"><use href="#sheet" x="-980" y="-2" class="px"/></symbol>
+    <symbol id="spr-dino-jump" viewBox="0 0 44 47"><use href="#sheet" x="-848" y="-2" class="px"/></symbol>
+
+    <symbol id="spr-dino-duck" viewBox="0 0 59 25">
+      <use href="#sheet" x="-1112" y="-2" class="px">
+        <animate attributeName="x" values="-1112;-1171;-1112" dur="0.24s" repeatCount="indefinite"/>
+      </use>
+    </symbol>
+
+    <symbol id="digit-0" viewBox="0 0 10 13"><use href="#sheet" x="-655" y="-2" class="px"/></symbol>
+    <symbol id="digit-2" viewBox="0 0 10 13"><use href="#sheet" x="-675" y="-2" class="px"/></symbol>
+    <symbol id="digit-4" viewBox="0 0 10 13"><use href="#sheet" x="-695" y="-2" class="px"/></symbol>
+    <symbol id="digit-h" viewBox="0 0 10 13"><use href="#sheet" x="-755" y="-2" class="px"/></symbol>
+    <symbol id="digit-i" viewBox="0 0 10 13"><use href="#sheet" x="-765" y="-2" class="px"/></symbol>
+  </defs>
+
+
+  <g clip-path="url(#game-clip)">
     <g>
-      <animateTransform attributeName="transform" type="translate" values="0,0;0,-2;0,0" dur="0.12s" repeatCount="indefinite"/>
+      <use href="#spr-cloud" x="760" y="38" width="46" height="14" opacity="0.85"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-860 0" dur="21s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <use href="#spr-cloud" x="920" y="62" width="46" height="14" opacity="0.75"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1020 0" dur="30s" repeatCount="indefinite"/>
+    </g>
 
-      <!-- === CHROME DINO BODY (smooth vector) === -->
-      <!-- Scale: about 70px wide, 65px tall, at x=75, ground at y=176 -->
-      <!-- Ground contact: feet at y=172 -->
+    <g>
+      <use href="#spr-horizon" x="30" y="152" width="600" height="12"/>
+      <use href="#spr-horizon" x="630" y="152" width="600" height="12"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-600,0" dur="4.8s" repeatCount="indefinite"/>
+    </g>
 
-      <!-- dino body silhouette -->
-      <g transform="translate(75, 108)">
-        <!-- Legs -->
-        <g>
-          <!-- back leg (animated - rotates) -->
-          <g>
-            <animateTransform attributeName="transform" type="rotate" values="-12,14,56;14,14,56;-12,14,56" dur="0.12s" repeatCount="indefinite"/>
-            <rect x="11" y="44" width="5" height="20" rx="2" fill="#535353"/>
-            <rect x="7" y="62" width="12" height="4" rx="2" fill="#535353"/>
-          </g>
-          <!-- front leg (animated - opposite phase) -->
-          <g>
-            <animateTransform attributeName="transform" type="rotate" values="14,36,44;-12,36,44;14,36,44" dur="0.12s" repeatCount="indefinite"/>
-            <rect x="34" y="44" width="5" height="20" rx="2" fill="#535353"/>
-            <rect x="30" y="62" width="12" height="4" rx="2" fill="#535353"/>
-          </g>
-        </g>
-
-        <!-- tail -->
-        <path d="M 4,32 L 0,28 L 10,38 Z" fill="#535353"/>
-
-        <!-- body + head (continuous shape) -->
-        <path d="
-          M 40,2
-          Q 44,2 46,6
-          Q 48,10 48,16
-          Q 48,22 46,26
-          L 44,30
-          Q 42,34 38,36
-          Q 42,36 44,38
-          Q 46,40 46,44
-          Q 46,46 44,48
-          Q 40,50 36,48
-          Q 32,46 30,44
-          L 24,44
-          Q 20,46 16,48
-          Q 12,50 8,48
-          Q 4,46 4,42
-          Q 4,38 6,36
-          Q 8,34 10,36
-          Q 6,34 4,30
-          Q 2,26 4,22
-          Q 6,18 10,16
-          Q 14,12 18,10
-          Q 22,8 26,6
-          Q 30,4 34,3
-          Q 36,2 40,2 Z
-        " fill="#535353"/>
-
-        <!-- crest on head -->
-        <path d="M 38,4 L 42,0 L 46,6 Z" fill="#535353"/>
-
-        <!-- eye -->
-        <circle cx="44" cy="12" r="3.5" fill="#ffffff"/>
-        <circle cx="45" cy="11.5" r="1.8" fill="#535353"/>
-
-        <!-- mouth line -->
-        <line x1="46" y1="26" x2="40" y2="28" stroke="#ffffff" stroke-width="0.5" opacity="0.5"/>
-
-        <!-- tiny arm -->
-        <path d="M 34,38 L 38,42 L 36,44" stroke="#535353" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      </g>
+    <g transform="translate(0,130)">
+      <use href="#spr-cactus-small" y="-35" width="17" height="35"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite"
+        values="-120,0;-120,0;760,0;-120,0;-120,0"
+        keyTimes="0;0.033333;0.033750;0.208333;0.208750;1"/>
+    </g>
+    <g transform="translate(0,115)">
+      <use href="#spr-cactus-large" y="-50" width="25" height="50"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite"
+        values="-120,0;-120,0;760,0;-120,0;-120,0"
+        keyTimes="0;0.133333;0.133750;0.308333;0.308750;1"/>
+    </g>
+    <g transform="translate(0,125)">
+      <use href="#spr-bird" y="-40" width="46" height="40"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite"
+        values="-120,0;-120,0;760,0;-120,0;-120,0"
+        keyTimes="0;0.258333;0.258750;0.433333;0.433750;1"/>
+    </g>
+    <g transform="translate(0,130)">
+      <use href="#spr-cactus-small" y="-35" width="17" height="35"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite"
+        values="-120,0;-120,0;760,0;-120,0;-120,0"
+        keyTimes="0;0.387500;0.387917;0.562500;0.562917;1"/>
+    </g>
+    <g transform="translate(0,125)">
+      <use href="#spr-bird" y="-40" width="46" height="40"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite"
+        values="-120,0;-120,0;760,0;-120,0;-120,0"
+        keyTimes="0;0.525000;0.525417;0.700000;0.700417;1"/>
+    </g>
+    <g transform="translate(0,115)">
+      <use href="#spr-cactus-large" y="-50" width="25" height="50"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite"
+        values="-120,0;-120,0;760,0;-120,0;-120,0"
+        keyTimes="0;0.625000;0.625417;0.800000;0.800417;1"/>
+    </g>
+    <g transform="translate(0,130)">
+      <use href="#spr-cactus-small" y="-35" width="17" height="35"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite"
+        values="-120,0;-120,0;760,0;-120,0;-120,0"
+        keyTimes="0;0.758333;0.758750;0.933333;0.933750;1"/>
+    </g>
+    <g transform="translate(0,125)">
+      <use href="#spr-bird" y="-40" width="46" height="40"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite"
+        values="-120,0;-120,0;760,0;-120,0;-120,0"
+        keyTimes="0;0.800000;0.800417;0.975000;0.975417;1"/>
     </g>
   </g>
 
-  <!-- score -->
-  <text x="700" y="32" font-family="&quot;Courier New&quot;, Courier, monospace" font-size="16" fill="#535353" text-anchor="end" font-weight="bold">HI 00000 00000</text>
+  <g transform="translate(80,63)">
+    <g opacity="1">
+      <animate attributeName="opacity" dur="24s" repeatCount="indefinite" calcMode="discrete" keyTimes="0.000000;0.167083;0.206667;0.267083;0.306667;0.389583;0.427083;0.521250;0.560833;0.656250;0.693750;0.758750;0.798333;0.883333;0.922917;0.931250;0.968750;1.000000" values="1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;1"/>
+      <use href="#spr-dino-run-1" x="0" y="0" width="44" height="47">
+        <animate attributeName="opacity" values="1;0;1" dur="0.166s" repeatCount="indefinite" calcMode="discrete"/>
+      </use>
+      <use href="#spr-dino-run-2" x="0" y="0" width="44" height="47">
+        <animate attributeName="opacity" values="0;1;0" dur="0.166s" repeatCount="indefinite" calcMode="discrete"/>
+      </use>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" dur="24s" repeatCount="indefinite" calcMode="discrete" keyTimes="0.000000;0.167083;0.206667;0.267083;0.306667;0.389583;0.427083;0.521250;0.560833;0.656250;0.693750;0.758750;0.798333;0.883333;0.922917;0.931250;0.968750;1.000000" values="0;1;0;1;0;0;0;1;0;0;0;1;0;1;0;0;0;0"/>
+      <use href="#spr-dino-jump" x="0" y="0" width="44" height="47"/>
+      <animateTransform attributeName="transform" type="translate" dur="24s" repeatCount="indefinite" keyTimes="0.000000;0.167083;0.177375;0.186875;0.196375;0.206667;0.267083;0.277375;0.286875;0.296375;0.306667;0.521250;0.531542;0.541042;0.550542;0.560833;0.758750;0.769042;0.778542;0.788042;0.798333;0.883333;0.893625;0.903125;0.912625;0.922917;1.000000" values="0,0;0,0;0,-16;0,-32;0,-16;0,0;0,0;0,-16;0,-32;0,-16;0,0;0,0;0,-16;0,-32;0,-16;0,0;0,0;0,-16;0,-32;0,-16;0,0;0,0;0,-16;0,-32;0,-16;0,0;0,0"/>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" dur="24s" repeatCount="indefinite" calcMode="discrete" keyTimes="0.000000;0.167083;0.206667;0.267083;0.306667;0.389583;0.427083;0.521250;0.560833;0.656250;0.693750;0.758750;0.798333;0.883333;0.922917;0.931250;0.968750;1.000000" values="0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;1;0;0"/>
+      <use href="#spr-dino-duck" x="0" y="22" width="59" height="25"/>
+    </g>
+  </g>
+
+  <g transform="translate(626,16)" opacity="0.78">
+    <use href="#digit-h" x="0" y="0" width="10" height="13"/>
+    <use href="#digit-i" x="11" y="0" width="10" height="13"/>
+    <use href="#digit-0" x="25" y="0" width="10" height="13"/>
+    <use href="#digit-0" x="36" y="0" width="10" height="13"/>
+    <use href="#digit-4" x="47" y="0" width="10" height="13"/>
+    <use href="#digit-2" x="58" y="0" width="10" height="13"/>
+    <use href="#digit-0" x="69" y="0" width="10" height="13"/>
+  </g>
+
+  <g transform="translate(705,16)">
+    <svg x="44" y="0" width="10" height="13" viewBox="0 0 10 13" overflow="hidden">
+      <use href="#sheet" x="-655" y="-2" class="px">
+        <animate attributeName="x" values="-655;-665;-675;-685;-695;-705;-715;-725;-735;-745;-655" dur="1.2s" repeatCount="indefinite" calcMode="discrete"/>
+      </use>
+    </svg>
+    <svg x="33" y="0" width="10" height="13" viewBox="0 0 10 13" overflow="hidden">
+      <use href="#sheet" x="-655" y="-2" class="px">
+        <animate attributeName="x" values="-655;-665;-675;-685;-695;-705;-715;-725;-735;-745;-655" dur="12s" repeatCount="indefinite" calcMode="discrete"/>
+      </use>
+    </svg>
+    <svg x="22" y="0" width="10" height="13" viewBox="0 0 10 13" overflow="hidden">
+      <use href="#sheet" x="-655" y="-2" class="px">
+        <animate attributeName="x" values="-655;-665;-675;-685;-695;-705;-715;-725;-735;-745;-655" dur="120s" repeatCount="indefinite" calcMode="discrete"/>
+      </use>
+    </svg>
+    <svg x="11" y="0" width="10" height="13" viewBox="0 0 10 13" overflow="hidden">
+      <use href="#sheet" x="-655" y="-2" class="px">
+        <animate attributeName="x" values="-655;-665;-675;-685;-695;-705;-715;-725;-735;-745;-655" dur="1200s" repeatCount="indefinite" calcMode="discrete"/>
+      </use>
+    </svg>
+    <svg x="0" y="0" width="10" height="13" viewBox="0 0 10 13" overflow="hidden">
+      <use href="#sheet" x="-655" y="-2" class="px">
+        <animate attributeName="x" values="-655;-665;-675;-685;-695;-705;-715;-725;-735;-745;-655" dur="12000s" repeatCount="indefinite" calcMode="discrete"/>
+      </use>
+    </svg>
+  </g>
+
+
+  <rect x="30" y="175" width="740" height="1" fill="#535353" opacity="0.6"/>
 </svg>
