@@ -108,7 +108,7 @@ def build_entries(totals):
         items.append(["Other", OTHER_COLOR, other])
     raw = [1000.0 * it[2] / grand for it in items]
     tenths = [int(x) for x in raw]
-    leftover = 1000 - sum(tenths)
+    leftover = max(0, 1000 - sum(tenths))
     for i in sorted(range(len(items)), key=lambda i: raw[i] - tenths[i], reverse=True)[:leftover]:
         tenths[i] += 1
     return [(items[i][0], items[i][1], tenths[i] / 10.0) for i in range(len(items))]
@@ -167,16 +167,28 @@ def main():
     for name, _, pct in entries:
         print(f"  {name}: {pct:.1f}%")
 
-    # Render everything before writing anything, then swap in atomically, so a
-    # render error or interrupted run can never truncate a good committed file.
+    # Render everything, stage every theme to a temp file, then swap them all in
+    # back-to-back. A render/write error thus can't truncate a good committed
+    # file or leave a mismatched light/dark pair, and stray temps are cleaned up.
     rendered = [(os.path.join(OUT_DIR, t["file"]), render_svg(entries, t)) for t in THEMES.values()]
     os.makedirs(OUT_DIR, exist_ok=True)
-    for path, content in rendered:
-        tmp = path + ".tmp"
-        with open(tmp, "w", encoding="utf-8") as f:
-            f.write(content)
-        os.replace(tmp, path)
-        print(f"Wrote {path}")
+    staged = []
+    try:
+        for path, content in rendered:
+            tmp = path + ".tmp"
+            with open(tmp, "w", encoding="utf-8") as f:
+                f.write(content)
+            staged.append((tmp, path))
+        for tmp, path in staged:
+            os.replace(tmp, path)
+            print(f"Wrote {path}")
+    finally:
+        for tmp, _ in staged:
+            if os.path.exists(tmp):
+                try:
+                    os.remove(tmp)
+                except OSError:
+                    pass
     return 0
 
 
