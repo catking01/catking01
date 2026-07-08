@@ -176,9 +176,9 @@ def main():
     try:
         for path, content in rendered:
             tmp = path + ".tmp"
+            staged.append((tmp, path))  # track before writing so a failed write still cleans up
             with open(tmp, "w", encoding="utf-8") as f:
                 f.write(content)
-            staged.append((tmp, path))
         for tmp, path in staged:
             os.replace(tmp, path)
             print(f"Wrote {path}")
