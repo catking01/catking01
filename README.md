@@ -92,12 +92,21 @@
 
 <div align="center">
 
-<img alt="3D contribution graph" width="86%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-3d-contrib/profile-night-rainbow.svg" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=catking01&bg_color=0d1117&color=58a6ff&line=58a6ff&point=58a6ff&area=true&area_color=58a6ff&hide_border=true&radius=10&custom_title=Contribution%20Activity" />
+  <img alt="Contribution activity graph" width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=catking01&bg_color=ffffff&color=24292f&line=1f6feb&point=1f6feb&area=true&area_color=1f6feb&hide_border=true&radius=10&custom_title=Contribution%20Activity" />
+</picture>
 
-<img alt="Full-year isometric calendar" width="86%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/isocalendar.fullyear.svg" />
+<br/>
 
-<img alt="Most used languages" width="43%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/languages.indepth.svg" />
-<img alt="Commit calendar" width="43%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/calendar.full.svg" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=catking01&theme=dark&hide_border=true&disable_animations=true&date_format=Y-m-d" />
+  <img alt="GitHub streak stats" width="70%" src="https://streak-stats.demolab.com/?user=catking01&theme=default&hide_border=true&disable_animations=true&date_format=Y-m-d" />
+</picture>
+
+<br/>
+
+<img alt="Most used languages" width="55%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/languages.indepth.svg" />
 
 </div>
 
