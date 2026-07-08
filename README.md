@@ -23,20 +23,37 @@
 </div>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner-dark.gif" />
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner.gif" />
-  <img alt="chrome-dino" src="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner-dark.gif" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner-dark.gif" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner.gif" />
+  <img alt="chrome-dino" src="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner-dark.gif" />
 </picture>
 
 <!--[sponsors](./sponsors.png)-->
 
+</div>
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img alt="C++" src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
+<img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
+<img alt="SciPy" src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white" />
+<img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" />
+<img alt="LaTeX" src="https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white" />
+<img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+<img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+<img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
+<img alt="macOS" src="https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white" />
 
 </div>
 
 # 🙋 Hello
 
 <table>
-<tr><td>
+<tr>
+<td width="62%" valign="top">
 
 ### 🤺 About Me
 
@@ -47,22 +64,44 @@
 <p>&emsp;&emsp;当前正在构建超快激光三维数字孪生平台与领域无关的科学模拟运行时（Runtime Lab），从激光器时域模拟、NALM模块数值建模到光学系统仿真，追求机器精度级别的数值可靠性。</p>
 <p>&emsp;&emsp;我相信代码是认知的载体，模拟不是黑箱——它是每一步都必须可追溯、可审计、可复现的因果系统。</p>
 
-</td></tr>
-<tr><td>
+</td>
+<td width="38%" valign="top">
+
+### 🧭 Quick Facts
+
+- 🔬 研究型系统工程师 · 物理 × 数值 × 架构
+- ⚡ 主攻超快激光仿真与科学模拟运行时
+- 🎯 追求机器精度级别的数值可靠性
+- 📍 `Asia/Shanghai` · 早起型选手 🐤
+- 💬 中文 / English
+
+</td>
+</tr>
+</table>
 
 ### 🚀 Current Work
-
-<img align="right" width="88" src="https://cdn.jsdelivr.net/gh/catking01/catking01/assets/images/astronaut.png" />
 
 - **Ultrafast Laser 3D Digital Twin** — 超快激光三维数字孪生平台，构建从光源到传输的端到端仿真系统
 - **Runtime Lab** — 领域无关的科学模拟运行时，支持 plugin registry、trace、replay、deterministic validation
 - **Laser Oscillator Simulator** — 激光振荡器时域模拟平台，支持动态增益模型与 NALM 结构全流程仿真
 - **Optical System Simulation** — 光束在复杂光学链路中的传输特性分析工具
 
-</td></tr>
-<tr><td>
+<a href="https://github.com/catking01?tab=repositories">📂 查看全部项目 / See all repositories →</a>
 
-### 📊 WakaTime
+## 📊 GitHub Analytics
+
+<div align="center">
+
+<img alt="3D contribution graph" width="86%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-3d-contrib/profile-night-rainbow.svg" />
+
+<img alt="Full-year isometric calendar" width="86%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/isocalendar.fullyear.svg" />
+
+<img alt="Most used languages" width="43%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/languages.indepth.svg" />
+<img alt="Commit calendar" width="43%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/calendar.full.svg" />
+
+</div>
+
+### 📈 WakaTime
 
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-406%20hrs%2032%20mins-blue?style=flat)
@@ -111,5 +150,3 @@ Mac                      55 hrs 14 mins      ███████████�
 
  Last Updated on 08/07/2026 02:51:38 UTC
 <!--END_SECTION:waka-->
-</td></tr>
-</table>
