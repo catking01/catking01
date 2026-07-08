@@ -23,7 +23,7 @@ MAX_LANGS = 6
 # GitHub linguist colors for the languages likely to surface on this profile.
 LINGUIST_COLORS = {
     "Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a",
-    "HTML": "#e34c26", "CSS": "#563d7c", "SCSS": "#c6538c", "Less": "#1d365d",
+    "HTML": "#e34c26", "CSS": "#663399", "SCSS": "#c6538c", "Less": "#1d365d",
     "Shell": "#89e051", "C": "#555555", "C++": "#f34b7d", "C#": "#178600",
     "Go": "#00ADD8", "Rust": "#dea584", "Java": "#b07219", "Kotlin": "#A97BFF",
     "Swift": "#F05138", "Objective-C": "#438eff", "PHP": "#4F5D95",

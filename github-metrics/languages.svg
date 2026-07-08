@@ -7,7 +7,7 @@
 <rect x="263.76" y="58" width="152.50" height="10" fill="#3572A5"><title>Python 35.3%</title></rect>
 <rect x="416.26" y="58" width="30.67" height="10" fill="#e34c26"><title>HTML 7.1%</title></rect>
 <rect x="446.93" y="58" width="5.62" height="10" fill="#89e051"><title>Shell 1.3%</title></rect>
-<rect x="452.54" y="58" width="3.46" height="10" fill="#563d7c"><title>CSS 0.8%</title></rect>
+<rect x="452.54" y="58" width="3.46" height="10" fill="#663399"><title>CSS 0.8%</title></rect>
 </g>
 <circle cx="29" cy="97" r="5" fill="#3178c6"/>
 <text x="41" y="101.5" font-family="system-ui,'Segoe UI',sans-serif" font-size="12" fill="#24292f">TypeScript <tspan fill="#57606a">55.5%</tspan></text>
@@ -17,6 +17,6 @@
 <text x="41" y="125.5" font-family="system-ui,'Segoe UI',sans-serif" font-size="12" fill="#24292f">HTML <tspan fill="#57606a">7.1%</tspan></text>
 <circle cx="245" cy="121" r="5" fill="#89e051"/>
 <text x="257" y="125.5" font-family="system-ui,'Segoe UI',sans-serif" font-size="12" fill="#24292f">Shell <tspan fill="#57606a">1.3%</tspan></text>
-<circle cx="29" cy="145" r="5" fill="#563d7c"/>
+<circle cx="29" cy="145" r="5" fill="#663399"/>
 <text x="41" y="149.5" font-family="system-ui,'Segoe UI',sans-serif" font-size="12" fill="#24292f">CSS <tspan fill="#57606a">0.8%</tspan></text>
 </svg>
