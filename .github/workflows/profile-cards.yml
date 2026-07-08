@@ -31,8 +31,8 @@ jobs:
         run: |
           fetch_svg() {
             url="$1"; out="$2"
-            curl -fsSL --max-time 120 --max-filesize 262144 \
-                 --retry 3 --retry-all-errors --retry-delay 5 "$url" -o "$out" \
+            curl -fsSL --max-time 60 --max-filesize 262144 \
+                 --retry 3 --retry-all-errors --retry-delay 5 --retry-max-time 120 "$url" -o "$out" \
               && grep -q '<svg' "$out" \
               && grep -q 'Total Contributions' "$out" \
               && ! grep -qi '<script' "$out"
@@ -51,7 +51,6 @@ jobs:
       # continue-on-error so neither a Python-setup hiccup nor a language-data
       # failure can discard the streak refresh; the failure is still flagged.
       - name: Set up Python
-        id: setup_python
         continue-on-error: true
         uses: actions/setup-python@v5
         with:
