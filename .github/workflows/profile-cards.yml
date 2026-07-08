@@ -22,35 +22,41 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Only overwrite the committed streak cards when the download is a real,
-      # healthy streak card. streak-stats.demolab.com returns HTTP 200 with a
-      # valid <svg> even for errors (rate limit, outage, unknown user), so we
-      # also require the "Total Contributions" label that only healthy cards
-      # have, cap the size, and reject anything carrying a <script>.
+      # Fetch both streak themes to temp files and only swap them in together, so
+      # a partial failure can't commit a mismatched light/dark pair. Each card
+      # must be a real, healthy streak SVG: streak-stats.demolab.com returns
+      # HTTP 200 with a valid <svg> even for errors, so we also require the
+      # "Total Contributions" label, cap the size, and reject any <script>.
       - name: Fetch streak cards
         run: |
           fetch_svg() {
-            url="$1"; dest="$2"; tmp="$(mktemp)"
-            if curl -fsSL --max-time 120 --max-filesize 262144 "$url" -o "$tmp" \
-               && grep -q '<svg' "$tmp" \
-               && grep -q 'Total Contributions' "$tmp" \
-               && ! grep -qi '<script' "$tmp"; then
-              mv "$tmp" "$dest"
-              echo "Updated $dest"
-            else
-              rm -f "$tmp"
-              echo "::warning::Streak fetch failed or returned a non-card SVG for $dest; keeping existing file"
-            fi
+            url="$1"; out="$2"
+            curl -fsSL --max-time 120 --max-filesize 262144 \
+                 --retry 3 --retry-all-errors --retry-delay 5 "$url" -o "$out" \
+              && grep -q '<svg' "$out" \
+              && grep -q 'Total Contributions' "$out" \
+              && ! grep -qi '<script' "$out"
           }
-          fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=default&hide_border=true&disable_animations=true&date_format=Y-m-d' github-metrics/streak.svg
-          fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=dark&hide_border=true&disable_animations=true&date_format=Y-m-d' github-metrics/streak.dark.svg
+          light="$(mktemp)"; dark="$(mktemp)"
+          if fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=default&hide_border=true&disable_animations=true&date_format=Y-m-d' "$light" \
+             && fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=dark&hide_border=true&disable_animations=true&date_format=Y-m-d' "$dark"; then
+            mv "$light" github-metrics/streak.svg
+            mv "$dark" github-metrics/streak.dark.svg
+            echo "Updated streak cards"
+          else
+            rm -f "$light" "$dark"
+            echo "::warning::Streak fetch failed or returned a non-card SVG; keeping existing streak cards"
+          fi
 
-      - uses: actions/setup-python@v5
+      # continue-on-error so neither a Python-setup hiccup nor a language-data
+      # failure can discard the streak refresh; the failure is still flagged.
+      - name: Set up Python
+        id: setup_python
+        continue-on-error: true
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      # continue-on-error keeps the job green (so a language hiccup can't discard
-      # the streak refresh) while still flagging the failed step in the UI.
       - name: Generate language cards
         id: gen
         continue-on-error: true
