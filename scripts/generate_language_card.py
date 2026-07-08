@@ -6,7 +6,8 @@ via the GitHub REST API (stdlib only), then renders:
   - github-metrics/languages.svg       (light theme)
   - github-metrics/languages.dark.svg  (dark theme)
 
-Auth: uses the GITHUB_TOKEN env var when present, otherwise unauthenticated.
+Auth: uses the GITHUB_TOKEN env var when present, otherwise unauthenticated
+(unauthenticated is capped at 60 req/hr per IP and unsuitable for CI).
 """
 
 import json
@@ -19,22 +20,23 @@ OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 API = "https://api.github.com"
 MAX_LANGS = 6
 
-# Official GitHub linguist colors (fallback map).
+# GitHub linguist colors for the languages likely to surface on this profile.
 LINGUIST_COLORS = {
-    "Python": "#3572A5",
-    "TypeScript": "#3178c6",
-    "JavaScript": "#f1e05a",
-    "HTML": "#e34c26",
-    "CSS": "#563d7c",
-    "Shell": "#89e051",
-    "C": "#555555",
-    "C++": "#f34b7d",
-    "Go": "#00ADD8",
-    "Rust": "#dea584",
-    "Jupyter Notebook": "#DA5B0B",
+    "Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a",
+    "HTML": "#e34c26", "CSS": "#563d7c", "SCSS": "#c6538c", "Less": "#1d365d",
+    "Shell": "#89e051", "C": "#555555", "C++": "#f34b7d", "C#": "#178600",
+    "Go": "#00ADD8", "Rust": "#dea584", "Java": "#b07219", "Kotlin": "#A97BFF",
+    "Swift": "#F05138", "Objective-C": "#438eff", "PHP": "#4F5D95",
+    "Ruby": "#701516", "Vue": "#41b883", "Svelte": "#ff3e00", "Astro": "#ff5a03",
+    "Dart": "#00B4AB", "Scala": "#c22d40", "Elixir": "#6e4a7e",
+    "Clojure": "#db5855", "Haskell": "#5e5086", "Lua": "#000080",
+    "Perl": "#0298c3", "R": "#198CE7", "MATLAB": "#e16737", "Julia": "#a270ba",
+    "Dockerfile": "#384d54", "Makefile": "#427819", "TeX": "#3D6117",
+    "PowerShell": "#012456", "Assembly": "#6E4C13", "Nix": "#7e7eff",
+    "Zig": "#ec915c", "Jupyter Notebook": "#DA5B0B", "Vim Script": "#199f4b",
 }
-DEFAULT_COLOR = "#8b949e"
-OTHER_COLOR = "#8b949e"
+DEFAULT_COLOR = "#8b949e"   # an unmapped language
+OTHER_COLOR = "#ededed"     # aggregated remainder (kept visually distinct)
 
 THEMES = {
     "light": {
@@ -55,6 +57,7 @@ THEMES = {
 def api_get(path):
     req = urllib.request.Request(API + path)
     req.add_header("Accept", "application/vnd.github+json")
+    req.add_header("X-GitHub-Api-Version", "2022-11-28")
     req.add_header("User-Agent", "profile-language-card")
     token = os.environ.get("GITHUB_TOKEN")
     if token:
@@ -81,21 +84,34 @@ def fetch_language_bytes():
 
 
 def esc(text):
-    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    # Drop XML-invalid control chars, then escape markup-significant characters
+    # (quotes included so the helper stays safe if ever used in an attribute).
+    text = "".join(ch for ch in text if ch >= " " or ch in "\t\n")
+    return (text.replace("&", "&amp;").replace("<", "&lt;")
+            .replace(">", "&gt;").replace('"', "&quot;"))
 
 
 def build_entries(totals):
-    """Return [(name, color, pct)] sorted by bytes desc, top N + Other."""
+    """Return [(name, color, pct)] for the top languages + 'Other'.
+
+    Percentages are rounded to one decimal with the largest-remainder method so
+    the displayed values sum to exactly 100.0.
+    """
     grand = sum(totals.values())
     if grand == 0:
         return []
     ranked = sorted(totals.items(), key=lambda kv: (-kv[1], kv[0]))
-    top, other_bytes = ranked[:MAX_LANGS], sum(b for _, b in ranked[MAX_LANGS:])
-    entries = [(name, LINGUIST_COLORS.get(name, DEFAULT_COLOR), 100.0 * nbytes / grand)
-               for name, nbytes in top]
-    if other_bytes:
-        entries.append(("Other", OTHER_COLOR, 100.0 * other_bytes / grand))
-    return entries
+    items = [[name, LINGUIST_COLORS.get(name, DEFAULT_COLOR), nbytes]
+             for name, nbytes in ranked[:MAX_LANGS]]
+    other = sum(b for _, b in ranked[MAX_LANGS:])
+    if other:
+        items.append(["Other", OTHER_COLOR, other])
+    raw = [1000.0 * it[2] / grand for it in items]
+    tenths = [int(x) for x in raw]
+    leftover = 1000 - sum(tenths)
+    for i in sorted(range(len(items)), key=lambda i: raw[i] - tenths[i], reverse=True)[:leftover]:
+        tenths[i] += 1
+    return [(items[i][0], items[i][1], tenths[i] / 10.0) for i in range(len(items))]
 
 
 def render_svg(entries, theme):
@@ -129,10 +145,11 @@ def render_svg(entries, theme):
     for i, (name, color, pct) in enumerate(entries):
         cx = pad + (i % 2) * col_w
         cy = legend_y + (i // 2) * row_h
+        label = name if len(name) <= 24 else name[:23] + "\u2026"
         parts.append(f'<circle cx="{cx + 5}" cy="{cy + 5}" r="5" fill="{color}"/>')
         parts.append(
             f'<text x="{cx + 17}" y="{cy + 9.5:g}" font-family="system-ui,\'Segoe UI\',sans-serif" '
-            f'font-size="12" fill="{theme["text"]}">{esc(name)} '
+            f'font-size="12" fill="{theme["text"]}">{esc(label)} '
             f'<tspan fill="{theme["muted"]}">{pct:.1f}%</tspan></text>')
 
     parts.append('</svg>')
@@ -150,11 +167,15 @@ def main():
     for name, _, pct in entries:
         print(f"  {name}: {pct:.1f}%")
 
+    # Render everything before writing anything, then swap in atomically, so a
+    # render error or interrupted run can never truncate a good committed file.
+    rendered = [(os.path.join(OUT_DIR, t["file"]), render_svg(entries, t)) for t in THEMES.values()]
     os.makedirs(OUT_DIR, exist_ok=True)
-    for theme in THEMES.values():
-        path = os.path.join(OUT_DIR, theme["file"])
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(render_svg(entries, theme))
+    for path, content in rendered:
+        tmp = path + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            f.write(content)
+        os.replace(tmp, path)
         print(f"Wrote {path}")
     return 0
 
