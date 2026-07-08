@@ -8,7 +8,8 @@ on:
 permissions:
   contents: write
 
-# Serialize with itself so a manual run can't race a delayed scheduled run.
+# Serialize with itself (and with metrics.yml, which shares this group) so
+# commits to the default branch can't race each other.
 concurrency:
   group: profile-readme-commits
   cancel-in-progress: false
@@ -24,14 +25,16 @@ jobs:
       # Only overwrite the committed streak cards when the download is a real,
       # healthy streak card. streak-stats.demolab.com returns HTTP 200 with a
       # valid <svg> even for errors (rate limit, outage, unknown user), so we
-      # also require the "Total Contributions" label that only healthy cards have.
+      # also require the "Total Contributions" label that only healthy cards
+      # have, cap the size, and reject anything carrying a <script>.
       - name: Fetch streak cards
         run: |
           fetch_svg() {
             url="$1"; dest="$2"; tmp="$(mktemp)"
-            if curl -fsSL --max-time 120 "$url" -o "$tmp" \
+            if curl -fsSL --max-time 120 --max-filesize 262144 "$url" -o "$tmp" \
                && grep -q '<svg' "$tmp" \
-               && grep -q 'Total Contributions' "$tmp"; then
+               && grep -q 'Total Contributions' "$tmp" \
+               && ! grep -qi '<script' "$tmp"; then
               mv "$tmp" "$dest"
               echo "Updated $dest"
             else
@@ -46,21 +49,30 @@ jobs:
         with:
           python-version: "3.12"
 
-      # A language-card failure must not discard a successful streak refresh, so
-      # keep the job green and surface the problem as a warning instead.
+      # continue-on-error keeps the job green (so a language hiccup can't discard
+      # the streak refresh) while still flagging the failed step in the UI.
       - name: Generate language cards
+        id: gen
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python scripts/generate_language_card.py \
-            || echo "::warning::language card generation failed; keeping existing cards"
+        run: python scripts/generate_language_card.py
 
-      # Commit with rebase-and-retry so an overlapping metrics.yml push (GitHub
-      # cron jitter can nullify the 30-minute stagger) doesn't fail the run.
+      # Commit with rebase-and-retry so an overlapping push (GitHub cron jitter
+      # can nullify the stagger) doesn't fail the run.
       - name: Commit updated cards
+        env:
+          GEN_OUTCOME: ${{ steps.gen.outcome }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # If language generation didn't succeed, discard any partial card
+          # changes so a stale/mismatched pair is never committed; the streak
+          # refresh still lands.
+          if [ "$GEN_OUTCOME" != "success" ]; then
+            echo "::warning::language card generation did not succeed; keeping existing language cards"
+            git checkout -- github-metrics/languages.svg github-metrics/languages.dark.svg 2>/dev/null || true
+          fi
           git add github-metrics/streak.svg github-metrics/streak.dark.svg \
                   github-metrics/languages.svg github-metrics/languages.dark.svg
           if git diff --cached --quiet; then
@@ -74,6 +86,6 @@ jobs:
               exit 0
             fi
             echo "Push rejected; rebasing onto latest (attempt $attempt)"
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git pull --rebase --autostash origin "refs/heads/${GITHUB_REF_NAME}"
           done
           git push
