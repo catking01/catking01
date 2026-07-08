@@ -1,0 +1,53 @@
+name: Profile Cards
+
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Only overwrite the committed streak cards if the download succeeds
+      # and looks like a real SVG (guards against committing an error page).
+      - name: Fetch streak cards
+        run: |
+          fetch_svg() {
+            url="$1"; dest="$2"; tmp="$(mktemp)"
+            if curl -fsSL --max-time 120 "$url" -o "$tmp" && head -c 4 "$tmp" | grep -q '<svg'; then
+              mv "$tmp" "$dest"
+              echo "Updated $dest"
+            else
+              rm -f "$tmp"
+              echo "Fetch failed or invalid SVG for $dest — keeping existing file"
+            fi
+          }
+          fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=default&hide_border=true&disable_animations=true&date_format=Y-m-d' github-metrics/streak.svg
+          fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=dark&hide_border=true&disable_animations=true&date_format=Y-m-d' github-metrics/streak.dark.svg
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate language cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_language_card.py
+
+      - name: Commit updated cards
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh profile cards [skip ci]"
+          file_pattern: >-
+            github-metrics/streak.svg
+            github-metrics/streak.dark.svg
+            github-metrics/languages.svg
+            github-metrics/languages.dark.svg

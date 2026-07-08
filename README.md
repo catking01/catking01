@@ -97,13 +97,16 @@
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=catking01&theme=dark&hide_border=true&disable_animations=true&date_format=Y-m-d" />
-  <img alt="GitHub streak stats" width="70%" src="https://streak-stats.demolab.com/?user=catking01&theme=default&hide_border=true&disable_animations=true&date_format=Y-m-d" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/streak.dark.svg" />
+  <img alt="GitHub streak stats" width="70%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/streak.svg" />
 </picture>
 
 <br/>
 
-<img alt="Most used languages" width="55%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/languages.indepth.svg" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/languages.dark.svg" />
+  <img alt="Most used languages" width="55%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/languages.svg" />
+</picture>
 
 </div>
 
