@@ -97,15 +97,15 @@
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/streak.dark.svg" />
-  <img alt="GitHub streak stats" width="70%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/streak.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/catking01/catking01/main/github-metrics/streak.dark.svg" />
+  <img alt="GitHub streak stats" width="70%" src="https://raw.githubusercontent.com/catking01/catking01/main/github-metrics/streak.svg" />
 </picture>
 
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/languages.dark.svg" />
-  <img alt="Most used languages" width="55%" src="https://cdn.jsdelivr.net/gh/catking01/catking01/github-metrics/languages.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/catking01/catking01/main/github-metrics/languages.dark.svg" />
+  <img alt="Most used languages" width="55%" src="https://raw.githubusercontent.com/catking01/catking01/main/github-metrics/languages.svg" />
 </picture>
 
 </div>
