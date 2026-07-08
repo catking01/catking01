@@ -38,7 +38,7 @@ jobs:
               && ! grep -qi '<script' "$out"
           }
           light="$(mktemp)"; dark="$(mktemp)"
-          if fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=default&hide_border=true&disable_animations=true&date_format=Y-m-d' "$light" \
+          if fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=default&hide_border=true&disable_animations=true&date_format=Y-m-d&currStreakLabel=C2410C' "$light" \
              && fetch_svg 'https://streak-stats.demolab.com/?user=catking01&theme=dark&hide_border=true&disable_animations=true&date_format=Y-m-d' "$dark"; then
             mv "$light" github-metrics/streak.svg
             mv "$dark" github-metrics/streak.dark.svg
