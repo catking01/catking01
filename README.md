@@ -69,9 +69,9 @@
 
 ```text
 🌞 Morning                22672 commits       █████░░░░░░░░░░░░░░░░░░░░   18.03 % 
-🌆 Daytime                42397 commits       ████████░░░░░░░░░░░░░░░░░   33.73 % 
-🌃 Evening                45631 commits       █████████░░░░░░░░░░░░░░░░   36.30 % 
-🌙 Night                  15013 commits       ███░░░░░░░░░░░░░░░░░░░░░░   11.94 % 
+🌆 Daytime                42402 commits       ████████░░░░░░░░░░░░░░░░░   33.73 % 
+🌃 Evening                45635 commits       █████████░░░░░░░░░░░░░░░░   36.30 % 
+🌙 Night                  15016 commits       ███░░░░░░░░░░░░░░░░░░░░░░   11.94 % 
 ```
 📅 **I'm Most Productive on Friday** 
 
@@ -79,8 +79,8 @@
 Monday                   17364 commits       ███░░░░░░░░░░░░░░░░░░░░░░   13.81 % 
 Tuesday                  14773 commits       ███░░░░░░░░░░░░░░░░░░░░░░   11.75 % 
 Wednesday                14874 commits       ███░░░░░░░░░░░░░░░░░░░░░░   11.83 % 
-Thursday                 24383 commits       █████░░░░░░░░░░░░░░░░░░░░   19.40 % 
-Friday                   25316 commits       █████░░░░░░░░░░░░░░░░░░░░   20.14 % 
+Thursday                 24387 commits       █████░░░░░░░░░░░░░░░░░░░░   19.40 % 
+Friday                   25324 commits       █████░░░░░░░░░░░░░░░░░░░░   20.14 % 
 Saturday                 17551 commits       ███░░░░░░░░░░░░░░░░░░░░░░   13.96 % 
 Sunday                   11452 commits       ██░░░░░░░░░░░░░░░░░░░░░░░   09.11 % 
 ```
@@ -92,23 +92,21 @@ Sunday                   11452 commits       ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Other                    60 hrs 33 mins      ███████████████░░░░░░░░░░   61.79 % 
-Markdown                 23 hrs 6 mins       ██████░░░░░░░░░░░░░░░░░░░   23.57 % 
-Python                   14 hrs 12 mins      ████░░░░░░░░░░░░░░░░░░░░░   14.49 % 
-JSON                     7 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.13 % 
-Bash                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 % 
+Other                    70 hrs 21 mins      █████████████████████░░░░   83.95 % 
+Markdown                 11 hrs 40 mins      ███░░░░░░░░░░░░░░░░░░░░░░   13.94 % 
+Python                   1 hr 46 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.11 % 
 
 🔥 Editors: 
-Zsh Wakatime             97 hrs 7 mins       █████████████████████████   99.10 % 
-Zsh                      47 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.81 % 
-Claude Code              5 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 % 
+Zsh Wakatime             82 hrs 42 mins      █████████████████████████   98.69 % 
+Zsh                      1 hr                ░░░░░░░░░░░░░░░░░░░░░░░░░   01.21 % 
+Claude Code              5 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 % 
 
 💻 Operating System: 
-Mac                      98 hrs              █████████████████████████   100.00 % 
+Mac                      83 hrs 48 mins      █████████████████████████   100.00 % 
 ```
 
 
- Last Updated on 24/07/2026 02:57:14 UTC
+ Last Updated on 25/07/2026 02:59:43 UTC
 <!--END_SECTION:waka-->
 </td></tr>
 </table>
