@@ -65,7 +65,7 @@
 ### 📊 WakaTime
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-807%20hrs%2051%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-822%20hrs%2029%20mins-blue?style=flat)
 
 **I'm an Early 🐤** 
 
@@ -94,19 +94,19 @@ Sunday                   11530 commits       ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Other                    81 hrs 51 mins      █████████████████████████   100.00 % 
+Other                    91 hrs 52 mins      █████████████████████████   100.00 % 
 
 🔥 Editors: 
-Zsh Wakatime             79 hrs 59 mins      ████████████████████████░   97.73 % 
-Zsh                      1 hr 46 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.17 % 
-Claude Code              5 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 % 
+Zsh Wakatime             89 hrs 19 mins      ████████████████████████░   97.21 % 
+Zsh                      2 hrs 28 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   02.68 % 
+Claude Code              5 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.10 % 
 
 💻 Operating System: 
-Mac                      81 hrs 51 mins      █████████████████████████   100.00 % 
+Mac                      91 hrs 52 mins      █████████████████████████   100.00 % 
 ```
 
 
- Last Updated on 26/07/2026 03:09:58 UTC
+ Last Updated on 27/07/2026 03:20:56 UTC
 <!--END_SECTION:waka-->
 </td></tr>
 </table>
