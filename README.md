@@ -23,20 +23,32 @@
 </div>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner-dark.gif" />
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner.gif" />
-  <img alt="chrome-dino" src="https://cdn.jsdelivr.net/gh/catking01/catking01@f5fda65/profile-dino-contrib/dino-runner-dark.gif" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner-dark.gif" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner.gif" />
+  <img alt="chrome-dino" src="https://cdn.jsdelivr.net/gh/catking01/catking01/profile-dino-contrib/dino-runner-dark.gif" />
 </picture>
 
 <!--[sponsors](./sponsors.png)-->
 
+</div>
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+<img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+<img alt="macOS" src="https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white" />
 
 </div>
 
 # 🙋 Hello
 
 <table>
-<tr><td>
+<tr>
+<td width="62%" valign="top">
 
 ### 🤺 About Me
 
@@ -47,8 +59,20 @@
 <p>&emsp;&emsp;当前正在构建超快激光三维数字孪生平台与领域无关的科学模拟运行时（Runtime Lab），从激光器时域模拟、NALM模块数值建模到光学系统仿真，追求机器精度级别的数值可靠性。</p>
 <p>&emsp;&emsp;我相信代码是认知的载体，模拟不是黑箱——它是每一步都必须可追溯、可审计、可复现的因果系统。</p>
 
-</td></tr>
-<tr><td>
+</td>
+<td width="38%" valign="top">
+
+### 🧭 Quick Facts
+
+- 🔬 研究型系统工程师 · 物理 × 数值 × 架构
+- ⚡ 主攻超快激光仿真与科学模拟运行时
+- 🎯 追求机器精度级别的数值可靠性
+- 📍 `Asia/Shanghai` · 早起型选手 🐤
+- 💬 中文 / English
+
+</td>
+</tr>
+</table>
 
 ### 🚀 Current Work
 
@@ -59,10 +83,34 @@
 - **Laser Oscillator Simulator** — 激光振荡器时域模拟平台，支持动态增益模型与 NALM 结构全流程仿真
 - **Optical System Simulation** — 光束在复杂光学链路中的传输特性分析工具
 
-</td></tr>
-<tr><td>
+<a href="https://github.com/catking01?tab=repositories">📂 查看全部项目 / See all repositories →</a>
 
-### 📊 WakaTime
+## 📊 GitHub Analytics
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=catking01&bg_color=0d1117&color=58a6ff&line=58a6ff&point=58a6ff&area=true&area_color=58a6ff&hide_border=true&radius=10&custom_title=Contribution%20Activity" />
+  <img alt="Contribution activity graph" width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=catking01&bg_color=ffffff&color=24292f&line=1f6feb&point=1f6feb&area=true&area_color=1f6feb&hide_border=true&radius=10&custom_title=Contribution%20Activity" />
+</picture>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/catking01/catking01/main/github-metrics/streak.dark.svg" />
+  <img alt="GitHub streak stats" width="70%" src="https://raw.githubusercontent.com/catking01/catking01/main/github-metrics/streak.svg" />
+</picture>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/catking01/catking01/main/github-metrics/languages.dark.svg" />
+  <img alt="Most used languages" width="55%" src="https://raw.githubusercontent.com/catking01/catking01/main/github-metrics/languages.svg" />
+</picture>
+
+</div>
+
+### 📈 WakaTime
 
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-691%20hrs%2054%20mins-blue?style=flat)
@@ -137,5 +185,3 @@ Claude                   0 lines             ░░░░░░░░░░░�
 
  Last Updated on 31/07/2026 03:17:43 UTC
 <!--END_SECTION:waka-->
-</td></tr>
-</table>
