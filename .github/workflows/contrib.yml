@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS, ARM64, catking-local-mac]
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v2
