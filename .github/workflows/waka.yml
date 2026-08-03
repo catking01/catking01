@@ -11,7 +11,7 @@ permissions:
 jobs:
   update-readme:
     name: Update Readme with Metrics
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS, ARM64, catking-local-mac]
     steps:
       - uses: anmol098/waka-readme-stats@master
         with:

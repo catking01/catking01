@@ -10,7 +10,7 @@ jobs:
   generate:
     permissions:
       contents: write
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS, ARM64, catking-local-mac]
     timeout-minutes: 5
 
     steps:
