@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS, ARM64, catking-local-mac]
     name: generate-readme-feed
     steps:
       - uses: actions/checkout@v4
