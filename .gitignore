@@ -20,3 +20,11 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+### Python (profile card generators) ###
+__pycache__/
+*.py[cod]
+*.tmp
+
+### OS ###
+.DS_Store
