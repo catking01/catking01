@@ -8,6 +8,12 @@ on:
     # https://docs.github.com/zh/actions/using-workflows/events-that-trigger-workflows#schedule
   workflow_dispatch:
 
+# Serialize with the Profile Cards workflow so their commits to the default
+# branch can't race each other.
+concurrency:
+  group: profile-readme-commits
+  cancel-in-progress: false
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
