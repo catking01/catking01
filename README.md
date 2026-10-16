@@ -67,7 +67,7 @@
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-781%20hrs%2035%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C138%20hrs%2051%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C161%20hrs%2031%20mins-blue?style=flat)
 
 **I'm an Early 🐤** 
 
@@ -96,40 +96,41 @@ Sunday                   14581 commits       ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Python                   57 hrs 53 mins      █████████████████████████   100.00 % 
+Python                   47 hrs 25 mins      ███████████████████████░░   90.03 % 
+Other                    5 hrs 15 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   09.97 % 
 
 🔥 Editors: 
-Zsh Wakatime             57 hrs 53 mins      █████████████████████████   100.00 % 
-Zsh                      0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
+Zsh Wakatime             52 hrs 24 mins      █████████████████████████   99.51 % 
+Zsh                      15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.49 % 
 
 💻 Operating System: 
-Mac                      57 hrs 53 mins      █████████████████████████   100.00 % 
+Mac                      52 hrs 40 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 57 hrs 53 mins (100.0%)
+⏱ AI Coding Time: 52 hrs 34 mins (99.83%)
 
 ✍️ 0 lines written by AI, 0 lines written by hand (0% AI-written)
 
-🔤 7,994,893,461 Input Tokens, 21,074,774 Output Tokens
+🔤 9,244,277,932 Input Tokens, 21,227,613 Output Tokens
 
-💵 $81002.67 Estimated AI Cost This Week
+💵 $93504.16 Estimated AI Cost This Week
 
-🧠 120 AI Sessions, 962 AI Prompts
+🧠 121 AI Sessions, 1740 AI Prompts
 
 GPT                      0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
 🧑‍💻 Mostly Hands-On — 0% of written lines came from AI
-📚 Verbose Prompter — average 29,320 characters per prompt
-🔁 Iterative Prompter — average 8 prompts per session
+📚 Verbose Prompter — average 19,650 characters per prompt
+🔁 Iterative Prompter — average 14 prompts per session
 🚀 High AI Trust — 0% of changed lines were hand-edited
 ```
 
 
- Last Updated on 15/10/2026 03:52:23 UTC
+ Last Updated on 16/10/2026 03:48:12 UTC
 <!--END_SECTION:waka-->
 </td></tr>
 </table>
