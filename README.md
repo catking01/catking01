@@ -96,41 +96,41 @@ Sunday                   14581 commits       ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Python                   45 hrs 27 mins      ██████████████████████░░░   89.65 % 
-Other                    5 hrs 15 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.35 % 
+Python                   31 hrs 42 mins      █████████████████████░░░░   85.80 % 
+Other                    5 hrs 15 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.20 % 
 
 🔥 Editors: 
-Zsh Wakatime             50 hrs 26 mins      █████████████████████████   99.49 % 
-Zsh                      15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.51 % 
+Zsh Wakatime             36 hrs 42 mins      █████████████████████████   99.30 % 
+Zsh                      15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.70 % 
 
 💻 Operating System: 
-Mac                      50 hrs 42 mins      █████████████████████████   100.00 % 
+Mac                      36 hrs 57 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 50 hrs 36 mins (99.83%)
+⏱ AI Coding Time: 36 hrs 52 mins (99.76%)
 
 ✍️ 0 lines written by AI, 0 lines written by hand (0% AI-written)
 
-🔤 8,623,883,813 Input Tokens, 18,964,901 Output Tokens
+🔤 5,003,376,099 Input Tokens, 8,821,508 Output Tokens
 
-💵 $87187.08 Estimated AI Cost This Week
+💵 $50618.69 Estimated AI Cost This Week
 
-🧠 112 AI Sessions, 1704 AI Prompts
+🧠 83 AI Sessions, 1476 AI Prompts
 
 GPT                      0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
 🧑‍💻 Mostly Hands-On — 0% of written lines came from AI
-📚 Verbose Prompter — average 19,725 characters per prompt
-🔁 Iterative Prompter — average 15 prompts per session
+📚 Verbose Prompter — average 18,694 characters per prompt
+🔁 Iterative Prompter — average 18 prompts per session
 🚀 High AI Trust — 0% of changed lines were hand-edited
 ```
 
 
- Last Updated on 17/10/2026 03:25:31 UTC
+ Last Updated on 18/10/2026 03:40:59 UTC
 <!--END_SECTION:waka-->
 </td></tr>
 </table>
