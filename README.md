@@ -96,40 +96,40 @@ Sunday                   14581 commits       ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Other                    27 hrs 54 mins      █████████████████████████   100.00 % 
+Other                    5 hrs 15 mins       █████████████████████████   100.00 % 
 
 🔥 Editors: 
-Zsh Wakatime             27 hrs 38 mins      █████████████████████████   99.07 % 
-Zsh                      15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.93 % 
+Zsh Wakatime             4 hrs 59 mins       ████████████████████████░   95.06 % 
+Zsh                      15 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.94 % 
 
 💻 Operating System: 
-Mac                      27 hrs 54 mins      █████████████████████████   100.00 % 
+Mac                      5 hrs 15 mins       █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 27 hrs 49 mins (99.68%)
+⏱ AI Coding Time: 5 hrs 9 mins (98.32%)
 
 ✍️ 0 lines written by AI, 0 lines written by hand (0% AI-written)
 
-🔤 6,031,299,635 Input Tokens, 15,133,526 Output Tokens
+🔤 2,423,091,267 Input Tokens, 3,863,442 Output Tokens
 
-💵 $61069.67 Estimated AI Cost This Week
+💵 $24424.08 Estimated AI Cost This Week
 
-🧠 147 AI Sessions, 3371 AI Prompts
+🧠 28 AI Sessions, 846 AI Prompts
 
 GPT                      0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
 🧑‍💻 Mostly Hands-On — 0% of written lines came from AI
-📚 Verbose Prompter — average 10,495 characters per prompt
-🔁 Iterative Prompter — average 23 prompts per session
+📚 Verbose Prompter — average 9,078 characters per prompt
+🔁 Iterative Prompter — average 30 prompts per session
 🚀 High AI Trust — 0% of changed lines were hand-edited
 ```
 
 
- Last Updated on 21/10/2026 03:59:54 UTC
+ Last Updated on 22/10/2026 03:57:19 UTC
 <!--END_SECTION:waka-->
 </td></tr>
 </table>
