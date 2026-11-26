@@ -96,23 +96,40 @@ Sunday                   14593 commits       ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-No Activity Tracked This Week
+Other                    122 hrs 59 mins     █████████████████████████   100.00 % 
 
 🔥 Editors: 
-No Activity Tracked This Week
+Zsh Wakatime             122 hrs 59 mins     █████████████████████████   99.99 % 
+Zsh                      0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 % 
 
 💻 Operating System: 
-No Activity Tracked This Week
+Mac                      122 hrs 59 mins     █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-No AI Coding Activity Tracked This Week
+⏱ AI Coding Time: 122 hrs 59 mins (100.0%)
+
+✍️ 0 lines written by AI, 0 lines written by hand (0% AI-written)
+
+🔤 18,331,905,867 Input Tokens, 35,177,158 Output Tokens
+
+💵 $185077.92 Estimated AI Cost This Week
+
+🧠 865 AI Sessions, 8558 AI Prompts
+
+GPT                      0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
+
+🔎 AI Coding Insights:
+🧑‍💻 Mostly Hands-On — 0% of written lines came from AI
+📚 Verbose Prompter — average 7,603 characters per prompt
+🔁 Iterative Prompter — average 10 prompts per session
+🚀 High AI Trust — 0% of changed lines were hand-edited
 ```
 
 
- Last Updated on 25/11/2026 07:33:19 UTC
+ Last Updated on 26/11/2026 07:13:04 UTC
 <!--END_SECTION:waka-->
 </td></tr>
 </table>
