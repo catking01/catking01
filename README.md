@@ -67,7 +67,7 @@
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-781%20hrs%2035%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C166%20hrs%2041%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-1%2C183%20hrs%2020%20mins-blue?style=flat)
 
 **I'm an Early 🐤** 
 
@@ -96,40 +96,40 @@ Sunday                   14593 commits       ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Shanghai
 
 💬 Programming Languages: 
-Other                    122 hrs 59 mins     █████████████████████████   100.00 % 
+Other                    113 hrs 58 mins     █████████████████████████   100.00 % 
 
 🔥 Editors: 
-Zsh Wakatime             122 hrs 59 mins     █████████████████████████   99.99 % 
+Zsh Wakatime             113 hrs 57 mins     █████████████████████████   99.99 % 
 Zsh                      0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 % 
 
 💻 Operating System: 
-Mac                      122 hrs 59 mins     █████████████████████████   100.00 % 
+Mac                      113 hrs 58 mins     █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 122 hrs 59 mins (100.0%)
+⏱ AI Coding Time: 113 hrs 58 mins (100.0%)
 
 ✍️ 0 lines written by AI, 0 lines written by hand (0% AI-written)
 
-🔤 18,331,905,867 Input Tokens, 35,177,158 Output Tokens
+🔤 17,368,281,661 Input Tokens, 32,780,721 Output Tokens
 
-💵 $185077.92 Estimated AI Cost This Week
+💵 $175321.85 Estimated AI Cost This Week
 
-🧠 865 AI Sessions, 8558 AI Prompts
+🧠 807 AI Sessions, 8394 AI Prompts
 
 GPT                      0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
 🧑‍💻 Mostly Hands-On — 0% of written lines came from AI
-📚 Verbose Prompter — average 7,603 characters per prompt
+📚 Verbose Prompter — average 7,497 characters per prompt
 🔁 Iterative Prompter — average 10 prompts per session
 🚀 High AI Trust — 0% of changed lines were hand-edited
 ```
 
 
- Last Updated on 26/11/2026 07:13:04 UTC
+ Last Updated on 27/11/2026 07:04:14 UTC
 <!--END_SECTION:waka-->
 </td></tr>
 </table>
